@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<script language="Javascript">
+<--
+var agora = new Date(document.lastModified);
+var dias =  new Array('dom','seg','ter','qua','qui','sex','sab');
+var meses = new Array('jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez');
+var data = (agora.getDate());
+
+function y2k(numero){
+	return (numero<1000)?numero+1900:numero;
+}
+codigo = dias[agora.getDay()]+", "+ data + " de " + meses[agora.getMonth()] + " de " + (yk2(agora.getYear()));
+
+document.write("Última atualização: " + codigo);
+//!-->
+</script>
+
+</body>
+</html>

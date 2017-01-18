@@ -1,0 +1,12 @@
+<html>
+    <head></head>
+    <body>
+        <script language="JavaScript">
+        var meuSite = "Pagina1.html";
+        if (document.referrer.indexOf(meuSite)== -1){
+            alert("Voce precisa acessar essa pagina a partir de "+ meuSite);
+            window.location.href = meuSite;
+        }
+        </script>
+    </body>
+</html>

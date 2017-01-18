@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+        function Mensagem(){
+            window.alert("Passados 3 segundos");
+        }
+        function Atualizar(){
+            window.alert("Atualizando...");
+            window.location.reload();
+        }
+        var Numero = 0;
+        document.form1.text1.value = "";
+        function Contar(){
+            document.form1.text1.value = Numero;
+            Numero = Numero+1;
+            window.setTimeout("Contar()",1000);
+        }
+        </script>
+    </head>
+    <body>
+        <form name="form1">
+            <input type="text" name="text1" size="10">
+            <input type="button" name="button1" value="Iniciar" onclick="Contar()">
+        </form>
+        <script>
+        //window.setTimeout("Atualizar()",3000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        
+    </head>
+    <body onload="Contar()">
+        <script lang="JavaScript">
+        var Num = 10;
+        window.status = "";
+        function Contar(){
+            if(Num==0){
+                window.location.href = "print.html";
+                window.status="Redirecionando...";
+            }
+            else
+            {
+                window.status="Redirecionando em "+ Num +" segundos";
+                Num = Num -1;
+                window.setTimeout("Contar()",1000);
+            }
+        }
+        </script>
+    </body>
+</html>

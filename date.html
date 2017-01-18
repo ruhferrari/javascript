@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <script language="JavaScript">
+            function DataCompleta(){
+            var hoje = new Date();
+            var dia = hoje.getDate();
+            var dia_sem = hoje.getDay();
+            var dias = new Array("dom","seg","ter","qua","qui","sex","sab");
+            var mes = hoje.getMonth()+1;
+            var meses = new Array("jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez");
+            var ano = hoje.getFullYear();
+            
+            var hora = hoje.getHours();
+            var min = hoje.getMinutes();
+            var seg = hoje.getSeconds();
+
+            //document.write("Hoje é "+ dias[dia_sem] +" ," +dia + " de " + meses[mes] + " de " + ano + " - " + hora +":"+min +":" +seg );
+            document.form1.relogio.value = hora +":"+min +":" +seg;
+            }
+            window.setInterval("DataCompleta()", 1000);
+        </script>
+        <form name="form1">
+            <input type="text" name="relogio" size="10">
+        </form>
+    </body>
+</html>

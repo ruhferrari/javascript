@@ -1,0 +1,28 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script lang="JavaScript">
+        var Numero = 0;
+        document.form1.text1.value = "";
+        function Contar(){
+            if(Numero<10){
+            Numero = Numero+1;
+            document.form1.text1.value = Numero;
+        }
+        else{
+            window.clearInterval();
+
+        }
+        }
+        function Iniciar(){
+            window.setInterval("Contar()",1000);
+        }
+        </script>
+        <form name="form1">
+            <input type="text" name="text1" size="10">
+            <input type="button" name="button1" value="Iniciar" onclick="Iniciar()">
+        </form>
+    </body>
+</html>

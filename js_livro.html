@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script language="JavaScript">
+    function Abrir(){
+        //window.open("js1.html","pagina2","width=200, height=200");
+         window.location.href = "string.html";
+    }
+    </script>
+</head>
+
+<body>
+
+<script language="JavaScript">
+var agora = new Date(document.lastModified);
+var dias =  new Array('dom','seg','ter','qua','qui','sex','sab');
+var meses = new Array('jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez');
+var data = (agora.getDate());
+
+function y2k(numero){
+	return (numero<1000)?numero+1900:numero;
+}
+codigo = dias[agora.getDay()] + ", "+ data + " de " + meses[agora.getMonth()] + " de " + (y2k(agora.getYear()));
+
+document.write("Ultima atualizacao: " + codigo);
+</script>
+
+<form>
+    <input type="button" value="Pagina" onclick="Abrir()";
+</form>
+
+</body>
+</html>

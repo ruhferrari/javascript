@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body onload="Digitar()">
+        <form name="form1">
+            Frase:
+            <input type="text" name="text1" size="30">
+        </form>
+        <script language="JavaScript">
+            var i = 0;
+            document.form1.text1.value = "";
+            function Digitar()  {
+                var Frase = "Frase sendo digitada gradualmente.";
+                var Digitando = Frase.slice(0,i);
+                document.form1.text1.value = Digitando;
+                i=i+1;
+                if(i >= Frase.length+10){
+                    i=0;
+                }
+            }
+            window.setInterval("Digitar()",200);
+            document.write(history.length);
+        </script>
+        
+    </body>
+</html>
