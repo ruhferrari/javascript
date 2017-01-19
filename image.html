@@ -1,0 +1,53 @@
+<html>
+<head>
+    <script>
+    function Testar(){
+    var nome = document.images["teste"].name;
+    var path = document.images["teste"].src;
+    window.alert("Nome:" + nome);
+    window.alert("Caminho:" + path);
+    }
+    function Testar2(){
+        window.alert("Mouse Over");
+    }
+    function Trocar1(){
+        document.images["teste"].src = "2.jpg";
+    }
+    function Trocar2(){
+        document.images["teste"].src = "1.jpg";
+    }
+    
+    </script>
+</head>
+<body onload="">
+    <img <source src="1.jpg" type="jpg" name="teste">
+    <script lang="JavaScript">
+    function Verificar(){
+        if(document.images["teste"].complete){
+            window.alert("Carregada");
+        }else{
+            window.alert("Não Carregada");
+        }
+    }
+    var contar = 1;
+    var img1 = "1.jpg";
+    var img2 = "2.jpg";
+    var img3 = "3.jpg";
+    function Exibir(){
+        if(!document.images){
+            return;
+        }
+        document.images["teste"].src = eval("img"+contar);
+        if(contar<3){
+            contar++;
+        }else{
+            contar = 1;
+        }
+        setTimeout("Exibir()",2000);
+    }
+    Exibir();
+    </script>
+<!--<img <source src="1.jpg" type="jpg" name="teste" height="300" width="300" hspace="100" onmouseover="Trocar1()" onmouseout="Trocar2()">-->
+
+</body>
+</html>
